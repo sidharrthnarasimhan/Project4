@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Features – Startup OS</title>
-  <meta name="description" content="Explore all the features of Startup OS: Decisions, Tasks, Announcements, People Ops, and Widget Integrations." />
+  <title>Features – StartUp OS</title>
+  <meta name="description" content="Explore all the features of StartUp OS: Decisions, Tasks, Announcements, People Ops, and Widget Integrations." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <header class="header">
   <div class="container nav">
-    <div class="logo">Startup OS</div>
+    <a href="index.html" class="logo">
+      <img src="assets/icons/startup-os-logo.svg" alt="StartUp OS" class="logo-icon">
+      <span>StartUp OS</span>
+    </a>
     <nav>
       <a href="index.html">Home</a>
+      <a href="overview.html">Overview</a>
       <a href="features.html" class="active">Features</a>
       <a href="pricing.html">Pricing</a>
     </nav>
@@ -22,77 +26,184 @@
 
 <section class="hero-large">
   <div class="container-narrow center">
-    <h1 class="display-large fade-in">Features</h1>
-    <p class="hero-subtitle fade-in">Everything you need.<br>Nothing you don't.</p>
+    <h1 class="display-large fade-in">Built for speed.</h1>
+    <p class="hero-subtitle fade-in">Every feature is designed around one goal: help your team ship faster. No bloat, no complexity—just powerful tools that get out of your way.</p>
   </div>
 </section>
 
 <section class="section-spacious">
-  <div class="container-narrow">
-    <div class="feature-minimal fade-in">
-      <div class="feature-minimal-icon decisions">●</div>
-      <h2 class="display-medium">Decisions</h2>
-      <p class="subtitle-large">Track and manage all critical decisions in one place.</p>
-      <div class="feature-minimal-list">
-        <div>Status tracking</div>
-        <div>Collaborative commenting</div>
-        <div>Decision ownership</div>
+  <div class="container">
+    <div class="feature-detail fade-in">
+      <div class="feature-icon decisions">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="feature-content">
+        <h2>Decision Engine</h2>
+        <p class="large-text">Stop losing institutional memory. Every decision is documented with context, stakeholders, alternatives considered, and final outcome. Six months later, you'll know exactly why you made that call.</p>
+        <ul class="feature-list">
+          <li>Structured decision framework with context, options, and outcomes</li>
+          <li>Stakeholder voting and async collaboration</li>
+          <li>Full decision history and searchable archive</li>
+          <li>Automatic notifications to relevant team members</li>
+          <li>Link decisions to tasks and projects</li>
+        </ul>
       </div>
     </div>
 
-    <div class="feature-minimal fade-in">
-      <div class="feature-minimal-icon tasks">●</div>
-      <h2 class="display-medium">Tasks</h2>
-      <p class="subtitle-large">Manage your team's workload with clarity.</p>
-      <div class="feature-minimal-list">
-        <div>Priority levels</div>
-        <div>Status workflow</div>
-        <div>Due date tracking</div>
+    <div class="feature-detail fade-in">
+      <div class="feature-icon tasks">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M9 11L12 14L22 4M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="feature-content">
+        <h2>Smart Task Management</h2>
+        <p class="large-text">Tasks that auto-prioritize based on deadlines, dependencies, and team capacity. See what matters right now, not buried in an endless list. Built for teams that ship fast.</p>
+        <ul class="feature-list">
+          <li>Auto-prioritization based on urgency and impact</li>
+          <li>Smart dependencies and blocking task detection</li>
+          <li>Team capacity planning and workload balancing</li>
+          <li>Recurring tasks with flexible schedules</li>
+          <li>Time tracking and velocity metrics</li>
+        </ul>
       </div>
     </div>
 
-    <div class="feature-minimal fade-in">
-      <div class="feature-minimal-icon announcements">●</div>
-      <h2 class="display-medium">Announcements</h2>
-      <p class="subtitle-large">Broadcast important updates to your team.</p>
-      <div class="feature-minimal-list">
-        <div>Rich text formatting</div>
-        <div>Pin important updates</div>
-        <div>Read receipts</div>
+    <div class="feature-detail fade-in">
+      <div class="feature-icon announcements">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M19 4H5C3.89543 4 3 4.89543 3 6V18C3 19.1046 3.89543 20 5 20H9L12 23L15 20H19C20.1046 20 21 19.1046 21 18V6C21 4.89543 20.1046 4 19 4Z" stroke="currentColor" stroke-width="2"/>
+          <path d="M7 10H17M7 14H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="feature-content">
+        <h2>Company Announcements</h2>
+        <p class="large-text">Broadcast company-wide updates that actually get read. Track who's seen what, pin critical updates, and ensure nothing important gets lost in Slack noise.</p>
+        <ul class="feature-list">
+          <li>Rich text editor with embeds, images, and videos</li>
+          <li>Read receipts and engagement analytics</li>
+          <li>Pin important announcements to the top</li>
+          <li>Schedule announcements for optimal timing</li>
+          <li>Category tags for filtering (company news, wins, product updates)</li>
+        </ul>
       </div>
     </div>
 
-    <div class="feature-minimal fade-in">
-      <div class="feature-minimal-icon people">●</div>
-      <h2 class="display-medium">People Ops</h2>
-      <p class="subtitle-large">Streamline HR operations and team management.</p>
-      <div class="feature-minimal-list">
-        <div>Leave requests</div>
-        <div>Role-based access</div>
-        <div>Team directory</div>
+    <div class="feature-detail fade-in">
+      <div class="feature-icon people">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+          <path d="M4 21V17C4 15.8954 4.89543 15 6 15H18C19.1046 15 20 15.8954 20 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="feature-content">
+        <h2>People Operations</h2>
+        <p class="large-text">HR essentials without the enterprise bloat. Time off requests, onboarding workflows, team directory, and org charts. Everything you need to manage people as you scale.</p>
+        <ul class="feature-list">
+          <li>Time off management with team calendar visibility</li>
+          <li>Customizable onboarding checklists and workflows</li>
+          <li>Interactive org chart with team structures</li>
+          <li>Role-based permissions and access control</li>
+          <li>Employee profiles with skills and contact info</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail fade-in">
+      <div class="feature-icon dashboard">
+        <svg viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+          <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+          <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+          <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="feature-content">
+        <h2>Analytics Dashboard</h2>
+        <p class="large-text">See what's working. Track team velocity, decision turnaround time, task completion rates, and engagement metrics. Data-driven insights without the complexity.</p>
+        <ul class="feature-list">
+          <li>Real-time team velocity and throughput metrics</li>
+          <li>Decision-making speed and quality tracking</li>
+          <li>Individual and team performance analytics</li>
+          <li>Custom reports and data exports</li>
+          <li>Weekly digest emails with key insights</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail fade-in">
+      <div class="feature-icon widgets">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="5" cy="12" r="2" fill="currentColor"/>
+          <circle cx="12" cy="12" r="2" fill="currentColor"/>
+          <circle cx="19" cy="12" r="2" fill="currentColor"/>
+          <path d="M5 10V5H10M19 10V5H14M5 14V19H10M19 14V19H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="feature-content">
+        <h2>Widget Integrations</h2>
+        <p class="large-text">Connect your existing tools. Slack, Gmail, and Outlook widgets let you create tasks, log decisions, and capture important moments without leaving your workflow.</p>
+        <ul class="feature-list">
+          <li>Slack widget: Turn messages into tasks and decisions</li>
+          <li>Gmail integration: Email to task conversion</li>
+          <li>Outlook add-in: Full StartUp OS access from inbox</li>
+          <li>Browser extension for quick capture anywhere</li>
+          <li>API access for custom integrations</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
 <section class="section-spacious dark">
-  <div class="container-narrow center">
-    <h2 class="display-medium fade-in">Integrations that work<br>with your workflow.</h2>
-    <p class="subtitle-large fade-in">Connect Slack, Gmail, and Outlook.<br>No migrations. No hassle.</p>
+  <div class="container center">
+    <h2 class="display-medium fade-in">Built for security.<br>Designed for scale.</h2>
+    <p class="subtitle-large fade-in" style="max-width: 700px; margin: 24px auto 60px;">Enterprise-grade security from day one. SOC 2 Type II certified, GDPR compliant, and hosted on secure cloud infrastructure.</p>
+
+    <div class="grid fade-in" style="text-align: left; margin-top: 48px;">
+      <div class="feature">
+        <h3 style="margin: 0 0 12px; font-size: 18px;">🔐 SOC 2 Type II</h3>
+        <p class="muted" style="margin: 0; font-weight: 400; line-height: 1.6;">Annual third-party audits verify our security controls and data protection practices.</p>
+      </div>
+      <div class="feature">
+        <h3 style="margin: 0 0 12px; font-size: 18px;">🌍 GDPR Compliant</h3>
+        <p class="muted" style="margin: 0; font-weight: 400; line-height: 1.6;">Full compliance with international data privacy regulations. Your data, your control.</p>
+      </div>
+      <div class="feature">
+        <h3 style="margin: 0 0 12px; font-size: 18px;">🔑 SSO & 2FA</h3>
+        <p class="muted" style="margin: 0; font-weight: 400; line-height: 1.6;">Single sign-on with Okta, Google, and Microsoft. Two-factor authentication standard.</p>
+      </div>
+      <div class="feature">
+        <h3 style="margin: 0 0 12px; font-size: 18px;">📝 Audit Logs</h3>
+        <p class="muted" style="margin: 0; font-weight: 400; line-height: 1.6;">Complete audit trail of all actions. Know who did what, when, and why.</p>
+      </div>
+      <div class="feature">
+        <h3 style="margin: 0 0 12px; font-size: 18px;">☁️ 99.9% Uptime</h3>
+        <p class="muted" style="margin: 0; font-weight: 400; line-height: 1.6;">Hosted on AWS with automatic failover and daily backups. Your data is always available.</p>
+      </div>
+      <div class="feature">
+        <h3 style="margin: 0 0 12px; font-size: 18px;">🔒 Encrypted Data</h3>
+        <p class="muted" style="margin: 0; font-weight: 400; line-height: 1.6;">AES-256 encryption at rest and TLS 1.3 in transit. Bank-level data protection.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="section-spacious">
   <div class="container-narrow center">
+    <h2 class="display-medium fade-in">Ready to get started?</h2>
+    <p class="subtitle-large fade-in">Join 2,500+ startups running on StartUp OS.</p>
     <div class="cta-simple fade-in">
-      <button class="btn primary large">Get Started</button>
+      <button class="btn primary large">Start Free Trial</button>
     </div>
-    <a href="pricing.html" class="link-muted fade-in">View pricing</a>
+    <a href="pricing.html" class="link-muted fade-in">View pricing details</a>
   </div>
 </section>
 
 <footer class="footer">
-  <div class="container">© 2026 Startup OS. All rights reserved.</div>
+  <div class="container">© 2026 StartUp OS. All rights reserved.</div>
 </footer>
 
 <script src="animations.js"></script>
