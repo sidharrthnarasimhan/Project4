@@ -966,6 +966,211 @@ h2 { margin: 0 0 8px; font-size: 28px; }
   line-height: 1.6;
 }
 
+/* Health Monitoring Dashboard */
+.admin-badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: rgba(124, 92, 255, 0.2);
+  border: 1px solid rgba(124, 92, 255, 0.4);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #7c5cff;
+}
+
+.health-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.btn.small {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.auto-refresh {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #aab6d6;
+}
+
+.auto-refresh input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #7c5cff;
+}
+
+.auto-refresh label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.last-updated {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #aab6d6;
+}
+
+/* Health Summary */
+.health-summary {
+  margin-bottom: 80px;
+}
+
+.status-card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  transition: all 0.3s ease;
+}
+
+.status-icon {
+  font-size: 48px;
+  line-height: 1;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.status-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.status-message {
+  font-size: 18px;
+  color: #aab6d6;
+  margin: 0;
+}
+
+/* Status Colors */
+.status-healthy {
+  color: #2ecc71;
+}
+
+.status-degraded {
+  color: #f39c12;
+}
+
+.status-error {
+  color: #e74c3c;
+}
+
+.status-checking {
+  color: #aab6d6;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.status-healthy,
+.status-degraded,
+.status-error {
+  animation: none;
+}
+
+/* Health Sections */
+.health-section {
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 32px;
+  color: #ffffff;
+}
+
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Health Items */
+.health-item {
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.health-item:hover {
+  background: rgba(255,255,255,.04);
+  border-color: rgba(255,255,255,.15);
+  transform: translateY(-2px);
+}
+
+.health-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.health-item-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.status-dot {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.health-item-response {
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.health-item-url {
+  font-size: 13px;
+  color: #7c5cff;
+  margin-bottom: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.health-item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.06);
+  font-size: 13px;
+}
+
+.detail-label {
+  color: #aab6d6;
+}
+
+.detail-value {
+  color: #d4dcf5;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
 .cta-section {
   background:
     radial-gradient(900px 520px at 50% 50%, rgba(124,92,255,.2), transparent 60%);
@@ -993,4 +1198,10 @@ h2 { margin: 0 0 8px; font-size: 28px; }
   .price-simple.featured:hover { transform: translateY(-8px); }
   .feature-minimal { margin: 80px 0; }
   .feature-minimal-list { flex-direction: column; align-items: center; }
+
+  /* Health dashboard mobile */
+  .health-grid { grid-template-columns: 1fr; }
+  .status-card { flex-direction: column; text-align: center; padding: 32px 24px; }
+  .health-section { margin-bottom: 60px; }
+  .health-controls { flex-direction: column; }
 }

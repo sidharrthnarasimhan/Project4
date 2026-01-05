@@ -11,8 +11,10 @@ This is a minimalist, Apple-inspired static marketing website for "Startup OS" -
 - `index.html` - Minimalist landing page with large hero, simple visual card, widget integrations, and streamlined sections
 - `features.html` - Clean features page with minimal design, focused on 4 core features
 - `pricing.html` - Simplified pricing with 3 tiers and minimal FAQ
+- `health.html` - Admin-only health monitoring dashboard with real-time status checks (access via `/health.html`)
 - `styles.css` - Apple-inspired styling with large typography, generous spacing, smooth animations, and minimalist aesthetic
 - `animations.js` - Scroll-based fade-in animations using Intersection Observer API
+- `health-monitor.js` - Health monitoring system with periodic checks and status indicators
 
 ## Development
 
@@ -85,3 +87,32 @@ python3 -m http.server 8000
 ## Navigation
 
 Minimal header with logo and 3 links (Home, Features, Pricing). Active state shows gradient underline. No "About" page - keeping it simple.
+
+**Hidden Admin Page:** `/health.html` - Health monitoring dashboard (not linked in navigation)
+
+## Health Monitoring Dashboard
+
+The `/health.html` page provides real-time monitoring of all services:
+
+**Features:**
+- **Auto-refresh:** Checks all services every 30 seconds (toggleable)
+- **Manual refresh:** Instant refresh button
+- **Overall status:** Summary card showing system health at a glance
+- **Service categories:**
+  - Frontend Services (index, features, pricing pages)
+  - Backend API Services (auth, decisions, tasks, announcements, people, widgets)
+  - Infrastructure (database, cache, storage)
+
+**Status Indicators:**
+- 🟢 Green - Healthy (< 200ms response)
+- 🟡 Yellow - Degraded (200-500ms or partial issues)
+- 🔴 Red - Error (down or > 500ms)
+- ⚪ Gray - Checking (pulsing animation)
+
+**Implementation Details:**
+- Frontend services: Actual HTTP checks to real pages
+- Backend/Infrastructure: Simulated with realistic random responses (90% healthy, 8% degraded, 2% error)
+- Response times are measured and color-coded
+- Additional metrics shown for infrastructure (DB connections, cache memory, storage usage)
+
+**Access:** Direct URL only (`/health.html`) - no navigation link to keep it admin-only

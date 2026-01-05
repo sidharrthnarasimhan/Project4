@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Health Status – Startup OS</title>
+  <meta name="description" content="System health monitoring dashboard" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <div class="logo">Startup OS</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+    </nav>
+    <div class="admin-badge">Admin</div>
+  </div>
+</header>
+
+<section class="hero-large">
+  <div class="container-narrow center">
+    <h1 class="display-large fade-in">System Health</h1>
+    <p class="hero-subtitle fade-in">Real-time monitoring of all services.</p>
+    <div class="health-controls fade-in">
+      <button class="btn ghost small" id="refresh-btn">Refresh Now</button>
+      <div class="auto-refresh">
+        <label>
+          <input type="checkbox" id="auto-refresh-toggle" checked>
+          Auto-refresh (30s)
+        </label>
+      </div>
+    </div>
+    <div class="last-updated" id="last-updated">Last checked: Never</div>
+  </div>
+</section>
+
+<section class="section-spacious">
+  <div class="container-narrow">
+
+    <!-- Overall Status -->
+    <div class="health-summary fade-in">
+      <div class="status-card" id="overall-status">
+        <div class="status-icon status-checking">●</div>
+        <div class="status-content">
+          <h3>Overall System Status</h3>
+          <p class="status-message">Checking services...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Frontend Services -->
+    <div class="health-section fade-in">
+      <h2 class="section-title">Frontend Services</h2>
+      <div class="health-grid">
+
+        <div class="health-item" data-service="website">
+          <div class="health-item-header">
+            <div class="health-item-title">
+              <div class="status-dot status-checking">●</div>
+              <span>Main Website</span>
+            </div>
+            <div class="health-item-response">— ms</div>
+          </div>
+          <div class="health-item-url">https://startup-os.com</div>
+          <div class="health-item-details">
+            <span class="detail-label">Endpoint:</span>
+            <span class="detail-value">/</span>
+          </div>
+        </div>
+
+        <div class="health-item" data-service="features">
+          <div class="health-item-header">
+            <div class="health-item-title">
+              <div class="status-dot status-checking">●</div>
+              <span>Features Page</span>
+            </div>
+            <div class="health-item-response">— ms</div>
+          </div>
+          <div class="health-item-url">https://startup-os.com/features</div>
+          <div class="health-item-details">
+            <span class="detail-label">Endpoint:</span>
+            <span class="detail-value">/features</span>
+          </div>
+        </div>
+
+        <div class="health-item" data-service="pricing">
+          <div class="health-item-header">
+            <div class="health-item-title">
+              <div class="status-dot status-checking">●</div>
+              <span>Pricing Page</span>
+            </div>
+            <div class="health-item-response">— ms</div>
+          </div>
+          <div class="health-item-url">https://startup-os.com/pricing</div>
+          <div class="health-item-details">
+            <span class="detail-label">Endpoint:</span>
+            <span class="detail-value">/pricing</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Backend API Services -->
+    <div class="health-section fade-in">
+      <h2 class="section-title">Backend API Services</h2>
+      <div class="health-grid">
+
+        <div class="health-item" data-service="api-auth">
+          <div class="health-item-header">
+            <div class="health-item-title">
+              <div class="status-dot status-checking">●</div>
+              <span>Authentication API</span>
+            </div>
+            <div class="health-item-response">— ms</div>
+          </div>
+          <div class="health-item-url">https://api.startup-os.com/auth</div>
+          <div class="health-item-details">
+            <span class="detail-label">Version:</span>
+            <span class="detail-value">v1.0.0</span>
+          </div>
+        </div>
+
+        <div class="health-item" data-service="api-decisions">
+          <div class="health-item-header">
+            <div class="health-item-title">
+              <div class="status-dot status-checking">●</div>
+              <span>Decisions API</span>
+            </div>
+            <div class="health-item-response">— ms</div>
+          </div>
+          <div class="health-item-url">https://api.startup-os.com/decisions</div>
+          <div class="health-item-details">
+            <span class="detail-label">Version:</span>
+            <span class="detail-value">v1.0.0</span>
+          </div>
+        </div>
+
+        <div class="health-item" data-service="api-tasks">
+          <div class="health-item-header">
+            <div class="health-item-title">
+              <div class="status-dot status-checking">●</div>
+              <span>Tasks API</span>
+            </div>
+            <div class="health-item-response">— ms</div>
+          </div>
+          <div class="health-item-url">https://api.startup-os.com/tasks</div>
+          <div class="health-item-details">
+            <span class="detail-label">Version:</span>
+            <span class="detail-value">v1.0.0</span>
+          </div>
+        </div>
+
+        <div class="health-item" data-service="api-announcements">
+          <div class="health-item-header">
+            <div class="health-item-title">
+              <div class="status-dot status-checking">●</div>
+              <span>Announcements API</span>
+            </div>
+            <div class="health-item-response">— ms</div>
+          </div>
+          <div class="health-item-url">https://api.startup-os.com/announcements</div>
+          <div class="health-item-details">
+            <span class="detail-label">Version:</span>
+            <span class="detail-value">v1.0.0</span>
+          </div>
+        </div>
+
+        <div class="health-item" data-service="api-people">
+          <div class="health-item-header">
+            <div class="health-item-title">
+              <div class="status-dot status-checking">●</div>
+              <span>People Ops API</span>
+            </div>
+            <div class="health-item-response">— ms</div>
+          </div>
+          <div class="health-item-url">https://api.startup-os.com/people</div>
+          <div class="health-item-details">
+            <span class="detail-label">Version:</span>
+            <span class="detail-value">v1.0.0</span>
+          </div>
+        </div>
+
+        <div class="health-item" data-service="api-widgets">
+          <div class="health-item-header">
+            <div class="health-item-title">
+              <div class="status-dot status-checking">●</div>
+              <span>Widget Integrations API</span>
+            </div>
+            <div class="health-item-response">— ms</div>
+          </div>
+          <div class="health-item-url">https://api.startup-os.com/widgets</div>
+          <div class="health-item-details">
+            <span class="detail-label">Version:</span>
+            <span class="detail-value">v1.0.0</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Database & Infrastructure -->
+    <div class="health-section fade-in">
+      <h2 class="section-title">Database & Infrastructure</h2>
+      <div class="health-grid">
+
+        <div class="health-item" data-service="database">
+          <div class="health-item-header">
+            <div class="health-item-title">
+              <div class="status-dot status-checking">●</div>
+              <span>PostgreSQL Database</span>
+            </div>
+            <div class="health-item-response">— ms</div>
+          </div>
+          <div class="health-item-url">postgres://db.startup-os.com:5432</div>
+          <div class="health-item-details">
+            <span class="detail-label">Connections:</span>
+            <span class="detail-value">— / 100</span>
+          </div>
+        </div>
+
+        <div class="health-item" data-service="cache">
+          <div class="health-item-header">
+            <div class="health-item-title">
+              <div class="status-dot status-checking">●</div>
+              <span>Redis Cache</span>
+            </div>
+            <div class="health-item-response">— ms</div>
+          </div>
+          <div class="health-item-url">redis://cache.startup-os.com:6379</div>
+          <div class="health-item-details">
+            <span class="detail-label">Memory:</span>
+            <span class="detail-value">— MB</span>
+          </div>
+        </div>
+
+        <div class="health-item" data-service="storage">
+          <div class="health-item-header">
+            <div class="health-item-title">
+              <div class="status-dot status-checking">●</div>
+              <span>S3 Storage</span>
+            </div>
+            <div class="health-item-response">— ms</div>
+          </div>
+          <div class="health-item-url">s3://startup-os-assets</div>
+          <div class="health-item-details">
+            <span class="detail-label">Usage:</span>
+            <span class="detail-value">— GB</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">© 2026 Startup OS. All rights reserved.</div>
+</footer>
+
+<script src="animations.js"></script>
+<script src="health-monitor.js"></script>
+
+</body>
+</html>
