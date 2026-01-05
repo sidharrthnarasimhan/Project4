@@ -5,8 +5,13 @@
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  background: #1a1f2e;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(124, 92, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(219, 39, 119, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 40% 90%, rgba(90, 169, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #1a1f2e 0%, #242938 50%, #1e2435 100%);
   color: #ffffff;
+  position: relative;
 }
 
 .container {
@@ -34,10 +39,12 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(26, 31, 46, 0.85);
-  backdrop-filter: blur(10px);
+  background:
+    linear-gradient(135deg, rgba(26, 31, 46, 0.9) 0%, rgba(36, 41, 56, 0.88) 100%);
+  backdrop-filter: blur(16px) saturate(180%);
   border-bottom: 1px solid rgba(255,255,255,.12);
   padding: 14px 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 }
 
 .nav {
@@ -47,7 +54,32 @@ body {
   gap: 18px;
 }
 
-.logo { font-weight: 900; font-size: 18px; letter-spacing: .2px; }
+.logo {
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: .2px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+  transform: scale(1.05);
+}
 
 nav { display:flex; gap: 16px; align-items:center; flex-wrap:wrap; }
 nav a {
@@ -96,13 +128,19 @@ nav a.active::after {
 }
 
 .btn.primary {
-  background: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
   color: #1a1f2e;
+  box-shadow:
+    0 4px 16px rgba(255, 255, 255, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn.primary:hover {
-  background: #f0f0f0;
+  background: linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%);
   transform: scale(1.02);
+  box-shadow:
+    0 6px 20px rgba(255, 255, 255, 0.15),
+    0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btn.ghost {
@@ -154,7 +192,25 @@ nav a.active::after {
 /* Hero Section */
 .hero-large {
   padding: 80px 0 100px;
-  background: #1a1f2e;
+  background:
+    radial-gradient(ellipse 800px 400px at 50% 20%, rgba(124, 92, 255, 0.15), transparent 60%),
+    radial-gradient(circle at 10% 50%, rgba(219, 39, 119, 0.08) 0%, transparent 50%);
+  position: relative;
+}
+
+.hero-large::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -170,10 +226,30 @@ nav a.active::after {
 /* Spacious Sections */
 .section-spacious {
   padding: 80px 0;
+  position: relative;
 }
 
 .section-spacious.dark {
-  background: #242938;
+  background:
+    radial-gradient(circle at 80% 30%, rgba(124, 92, 255, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 20% 70%, rgba(90, 169, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(180deg, #242938 0%, #1e2332 100%);
+  position: relative;
+}
+
+.section-spacious.dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(rgba(255,255,255,.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.01) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 h1 {
@@ -341,11 +417,24 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 
 .feature, .price-card {
   border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.03);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.02) 100%);
   border-radius: 16px;
   padding: 18px;
   text-align: center;
   font-weight: 900;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.feature:hover, .price-card:hover {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.03) 100%);
+  border-color: rgba(124, 92, 255, 0.3);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    0 0 40px rgba(124, 92, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .price-card { text-align: left; }
@@ -690,11 +779,15 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 }
 
 .visual-card {
-  background: rgba(255,255,255,.03);
-  border: 1px solid rgba(255,255,255,.1);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.02) 100%);
+  border: 1px solid rgba(255,255,255,.12);
   border-radius: 24px;
   padding: 32px;
   backdrop-filter: blur(20px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .visual-header {
@@ -856,27 +949,40 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 }
 
 .price-simple {
-  background: rgba(255,255,255,.02);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.02) 100%);
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 24px;
   padding: 48px 32px;
   transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .price-simple:hover {
   transform: translateY(-8px);
-  background: rgba(255,255,255,.04);
-  border-color: rgba(255,255,255,.2);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.03) 100%);
+  border-color: rgba(124, 92, 255, 0.3);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    0 0 60px rgba(124, 92, 255, 0.1);
 }
 
 .price-simple.featured {
-  background: rgba(255,255,255,.05);
-  border-color: rgba(255,255,255,.2);
+  background:
+    linear-gradient(135deg, rgba(124, 92, 255, 0.08) 0%, rgba(219, 39, 119, 0.06) 100%);
+  border-color: rgba(124, 92, 255, 0.3);
   transform: scale(1.05);
+  box-shadow:
+    0 12px 40px rgba(124, 92, 255, 0.2),
+    0 0 80px rgba(124, 92, 255, 0.1);
 }
 
 .price-simple.featured:hover {
   transform: scale(1.05) translateY(-8px);
+  box-shadow:
+    0 16px 48px rgba(124, 92, 255, 0.25),
+    0 0 100px rgba(124, 92, 255, 0.15);
 }
 
 .price-simple h3 {
