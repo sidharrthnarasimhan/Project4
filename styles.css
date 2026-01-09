@@ -6,10 +6,10 @@ body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   background:
-    radial-gradient(circle at 20% 10%, rgba(124, 92, 255, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(219, 39, 119, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 40% 90%, rgba(90, 169, 255, 0.1) 0%, transparent 50%),
-    linear-gradient(135deg, #1a1f2e 0%, #242938 50%, #1e2435 100%);
+    radial-gradient(circle at 20% 10%, rgba(14, 165, 233, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 90%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0e1a 0%, #0f1419 50%, #0d1117 100%);
   color: #ffffff;
   position: relative;
 }
@@ -40,11 +40,11 @@ body {
   top: 0;
   z-index: 50;
   background:
-    linear-gradient(135deg, rgba(26, 31, 46, 0.9) 0%, rgba(36, 41, 56, 0.88) 100%);
+    linear-gradient(135deg, rgba(10, 14, 26, 0.95) 0%, rgba(15, 20, 25, 0.92) 100%);
   backdrop-filter: blur(16px) saturate(180%);
-  border-bottom: 1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid rgba(14, 165, 233, 0.15);
   padding: 14px 0;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 }
 
 .nav {
@@ -105,7 +105,7 @@ nav a.active::after {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(135deg, #7c5cff, #5aa9ff);
+  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
   border-radius: 2px;
 }
 
@@ -193,8 +193,8 @@ nav a.active::after {
 .hero-large {
   padding: 80px 0 100px;
   background:
-    radial-gradient(ellipse 800px 400px at 50% 20%, rgba(124, 92, 255, 0.15), transparent 60%),
-    radial-gradient(circle at 10% 50%, rgba(219, 39, 119, 0.08) 0%, transparent 50%);
+    radial-gradient(ellipse 800px 400px at 50% 20%, rgba(14, 165, 233, 0.12), transparent 60%),
+    radial-gradient(circle at 10% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
   position: relative;
 }
 
@@ -231,9 +231,9 @@ nav a.active::after {
 
 .section-spacious.dark {
   background:
-    radial-gradient(circle at 80% 30%, rgba(124, 92, 255, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 20% 70%, rgba(90, 169, 255, 0.1) 0%, transparent 50%),
-    linear-gradient(180deg, #242938 0%, #1e2332 100%);
+    radial-gradient(circle at 80% 30%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 20% 70%, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #0f1419 0%, #0d1117 100%);
   position: relative;
 }
 
@@ -390,9 +390,9 @@ h1 {
   color: #081022;
 }
 .appicon svg { width: 22px; height: 22px; color: #081022; }
-.appicon.slack { background: linear-gradient(135deg, #7c5cff, #2de2e6); }
-.appicon.gmail { background: linear-gradient(135deg, #ff5a5f, #ffd166); }
-.appicon.outlook { background: linear-gradient(135deg, #2f7dff, #7bd0ff); }
+.appicon.slack { background: linear-gradient(135deg, #0ea5e9, #22d3ee); }
+.appicon.gmail { background: linear-gradient(135deg, #f43f5e, #fbbf24); }
+.appicon.outlook { background: linear-gradient(135deg, #3b82f6, #60a5fa); }
 
 .appicon.large {
   width: 80px;
@@ -430,16 +430,16 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 .feature:hover, .price-card:hover {
   background:
     linear-gradient(135deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.03) 100%);
-  border-color: rgba(124, 92, 255, 0.3);
+  border-color: rgba(14, 165, 233, 0.4);
   box-shadow:
     0 8px 24px rgba(0, 0, 0, 0.15),
-    0 0 40px rgba(124, 92, 255, 0.1);
+    0 0 40px rgba(14, 165, 233, 0.15);
   transform: translateY(-2px);
 }
 
 .price-card { text-align: left; }
 .price { font-size: 28px; font-weight: 900; margin: 12px 0 8px; }
-.price-card.highlight { border-color: rgba(124,92,255,.45); background: rgba(124,92,255,.10); }
+.price-card.highlight { border-color: rgba(14, 165, 233, 0.45); background: rgba(14, 165, 233, 0.10); }
 
 .faq details {
   border: 1px solid rgba(255,255,255,.10);
@@ -521,7 +521,7 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 .page-hero {
   padding: 100px 0 50px;
   background:
-    radial-gradient(800px 400px at 50% 20%, rgba(124,92,255,.15), transparent 60%);
+    radial-gradient(800px 400px at 50% 20%, rgba(14, 165, 233, 0.12), transparent 60%);
   text-align: center;
 }
 
@@ -554,7 +554,7 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 }
 
 .feature-detail:hover {
-  border-color: rgba(124,92,255,.3);
+  border-color: rgba(14, 165, 233, 0.4);
   background: rgba(255,255,255,.04);
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0,0,0,.2);
@@ -574,12 +574,12 @@ h2 { margin: 0 0 8px; font-size: 28px; }
   height: 40px;
 }
 
-.feature-icon.decisions { background: linear-gradient(135deg, #2ecc71, #27ae60); }
-.feature-icon.tasks { background: linear-gradient(135deg, #3498db, #2980b9); }
-.feature-icon.announcements { background: linear-gradient(135deg, #f39c12, #e67e22); }
-.feature-icon.people { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
-.feature-icon.dashboard { background: linear-gradient(135deg, #7c5cff, #5aa9ff); }
-.feature-icon.widgets { background: linear-gradient(135deg, #1abc9c, #16a085); }
+.feature-icon.decisions { background: linear-gradient(135deg, #10b981, #059669); }
+.feature-icon.tasks { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.feature-icon.announcements { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.feature-icon.people { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.feature-icon.dashboard { background: linear-gradient(135deg, #0ea5e9, #06b6d4); }
+.feature-icon.widgets { background: linear-gradient(135deg, #14b8a6, #0d9488); }
 
 .feature-content h2 {
   margin: 0 0 12px;
@@ -601,7 +601,7 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 
 .feature-list li::before {
   content: '→';
-  color: #7c5cff;
+  color: #0ea5e9;
   font-weight: bold;
 }
 
@@ -628,8 +628,8 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 }
 
 .price-card-large.highlight {
-  border-color: rgba(124,92,255,.45);
-  background: rgba(124,92,255,.10);
+  border-color: rgba(14, 165, 233, 0.45);
+  background: rgba(14, 165, 233, 0.10);
   transform: scale(1.05);
 }
 
@@ -650,8 +650,8 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 }
 
 .plan-badge.popular {
-  background: linear-gradient(135deg, #7c5cff, #5aa9ff);
-  color: #081022;
+  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+  color: #0a0e1a;
 }
 
 .pricing-features {
@@ -729,7 +729,7 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 }
 
 .value-card:hover {
-  border-color: rgba(124,92,255,.3);
+  border-color: rgba(14, 165, 233, 0.4);
   transform: translateY(-4px);
 }
 
@@ -761,14 +761,14 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 .contact-link {
   display: inline-block;
   margin-top: 12px;
-  color: #7c5cff;
+  color: #0ea5e9;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .contact-link:hover {
-  color: #5aa9ff;
+  color: #06b6d4;
   text-decoration: underline;
 }
 
@@ -905,7 +905,7 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 /* Links */
 .link-arrow {
   display: inline-block;
-  color: #7c5cff;
+  color: #0ea5e9;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -914,7 +914,7 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 }
 
 .link-arrow:hover {
-  color: #5aa9ff;
+  color: #06b6d4;
 }
 
 .link-arrow::after {
@@ -962,27 +962,27 @@ h2 { margin: 0 0 8px; font-size: 28px; }
   transform: translateY(-8px);
   background:
     linear-gradient(135deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.03) 100%);
-  border-color: rgba(124, 92, 255, 0.3);
+  border-color: rgba(14, 165, 233, 0.4);
   box-shadow:
     0 12px 40px rgba(0, 0, 0, 0.15),
-    0 0 60px rgba(124, 92, 255, 0.1);
+    0 0 60px rgba(14, 165, 233, 0.15);
 }
 
 .price-simple.featured {
   background:
-    linear-gradient(135deg, rgba(124, 92, 255, 0.08) 0%, rgba(219, 39, 119, 0.06) 100%);
-  border-color: rgba(124, 92, 255, 0.3);
+    linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(6, 182, 212, 0.06) 100%);
+  border-color: rgba(14, 165, 233, 0.3);
   transform: scale(1.05);
   box-shadow:
-    0 12px 40px rgba(124, 92, 255, 0.2),
-    0 0 80px rgba(124, 92, 255, 0.1);
+    0 12px 40px rgba(14, 165, 233, 0.2),
+    0 0 80px rgba(14, 165, 233, 0.1);
 }
 
 .price-simple.featured:hover {
   transform: scale(1.05) translateY(-8px);
   box-shadow:
-    0 16px 48px rgba(124, 92, 255, 0.25),
-    0 0 100px rgba(124, 92, 255, 0.15);
+    0 16px 48px rgba(14, 165, 233, 0.25),
+    0 0 100px rgba(14, 165, 233, 0.15);
 }
 
 .price-simple h3 {
@@ -1076,13 +1076,13 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 .admin-badge {
   padding: 6px 12px;
   border-radius: 12px;
-  background: rgba(124, 92, 255, 0.2);
-  border: 1px solid rgba(124, 92, 255, 0.4);
+  background: rgba(14, 165, 233, 0.2);
+  border: 1px solid rgba(14, 165, 233, 0.4);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #7c5cff;
+  color: #0ea5e9;
 }
 
 .health-controls {
@@ -1111,7 +1111,7 @@ h2 { margin: 0 0 8px; font-size: 28px; }
   width: 18px;
   height: 18px;
   cursor: pointer;
-  accent-color: #7c5cff;
+  accent-color: #0ea5e9;
 }
 
 .auto-refresh label {
@@ -1251,7 +1251,7 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 
 .health-item-url {
   font-size: 13px;
-  color: #7c5cff;
+  color: #0ea5e9;
   margin-bottom: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1279,7 +1279,7 @@ h2 { margin: 0 0 8px; font-size: 28px; }
 
 .cta-section {
   background:
-    radial-gradient(900px 520px at 50% 50%, rgba(124,92,255,.2), transparent 60%);
+    radial-gradient(900px 520px at 50% 50%, rgba(14, 165, 233, 0.15), transparent 60%);
 }
 
 @media (max-width: 980px) {
